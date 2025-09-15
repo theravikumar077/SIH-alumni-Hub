@@ -45,17 +45,32 @@
    <nav class="bg-white/30 dark:bg-gray-800/30 backdrop-blur-md shadow-lg fixed w-full z-20 top-0 border-b border-white/20 dark:border-gray-700/40">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-16">
     <i class="fas fa-graduation-cap text-2xl mr-2 text-blue-600 text-3xl"></i>
-    <a href="#home" class="text-xl font-bold text-indigo nav-link" data-section="home">Alumni Hub</a>
+    <a href="#home" class="text-xl font-bold text-indigo nav-link " data-section="home">Alumni Hub</a>
 
     <!-- Desktop Navigation -->
-    <div class="hidden md:flex space-x-2">
-      <a href="#home" class="nav-link active px-3 py-2 rounded-lg transition duration-300 hover:bg-blue-500 hover:text-white" data-section="home">Home</a>
-      <a href="#directory" class="nav-link px-3 py-2 rounded-lg transition duration-300 hover:bg-blue-500 hover:text-white" data-section="directory">Directory</a>
-      <a href="#mentorship" class="nav-link px-3 py-2 rounded-lg transition duration-300 hover:bg-blue-500 hover:text-white" data-section="mentorship">Mentorship</a>
-      <a href="#events" class="nav-link px-3 py-2 rounded-lg transition duration-300 hover:bg-blue-500 hover:text-white" data-section="events">Events</a>
-      <a href="#donations" class="nav-link px-3 py-2 rounded-lg transition duration-300 hover:bg-blue-500 hover:text-white" data-section="donations">Donations</a>
-      <a href="#admin" class="nav-link px-3 py-2 rounded-lg transition duration-300 hover:bg-blue-500 hover:text-white" data-section="admin">Admin</a>
-      <a href="#settings" class="nav-link px-3 py-2 rounded-lg transition duration-300 hover:bg-blue-500 hover:text-white" data-section="settings">Settings</a>
+    <div class="hidden md:flex space-x-2 ml-4">
+      <a href="#home" class="nav-link px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-gray-200 
+      transform transition-all duration-300 ease-in-out 
+      hover:scale-110 hover:bg-gradient-to-r hover:from-[#A2BFFE] hover:to-purple-500 
+      hover:text-white hover:shadow-lg" data-section="home">Home</a>
+      <a href="#directory" class="nav-link px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-gray-200 
+                transform transition-all duration-300 ease-in-out 
+                hover:scale-110 hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 hover:text-white hover:shadow-lg" data-section="directory">Alumni</a>
+      <a href="#mentorship" class="nav-link px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-gray-200 
+                transform transition-all duration-300 ease-in-out 
+                hover:scale-110 hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 hover:text-white hover:shadow-lg" data-section="mentorship">Mentorship</a>
+      <a href="#events" class="nav-link px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-gray-200 
+                transform transition-all duration-300 ease-in-out 
+                hover:scale-110 hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 hover:text-white hover:shadow-lg" data-section="events">Events</a>
+      <a href="#donations" class="nav-link px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-gray-200 
+                transform transition-all duration-300 ease-in-out 
+                hover:scale-110 hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 hover:text-white hover:shadow-lg" data-section="donations">Donations</a>
+      <a href="#admin" class="nav-link px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-gray-200 
+                transform transition-all duration-300 ease-in-out 
+                hover:scale-110 hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 hover:text-white hover:shadow-lg" data-section="admin">Admin</a>
+      <a href="#settings" class="nav-link px-4 py-2 rounded-lg font-medium text-gray-700 dark:text-gray-200 
+      transform transition-all duration-300 ease-in-out 
+      hover:scale-110 hover:bg-gradient-to-r hover:from-blue-500 hover:to-purple-500 hover:text-white hover:shadow-lg" data-section="settings">Settings</a>
     </div>
 
     <!-- Mobile Menu Button -->
@@ -74,10 +89,9 @@
       </div>
 
       <button id="notifications-bell" class="relative p-2">
-        <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-            d="M15 17h5l-1 1m-1-1H9m5 3V7.5M4 12h16" />
-        </svg>
+        <span class="material-symbols-rounded h-5 w-5">
+          notifications
+          </span>
         <span id="notification-count"
           class="absolute top-0 right-0 bg-red-500 text-white text-xs rounded-full px-1 hidden">0</span>
       </button>
@@ -95,7 +109,7 @@
             d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
         </svg>
       </button>
-      <img id="user-avatar" src="https://via.placeholder.com/32" alt="User" class="h-8 w-8 rounded-full">
+      <img id="user-avatar" src="https://media.istockphoto.com/id/1337144146/vector/default-avatar-profile-icon-vector.jpg?s=612x612&w=0&k=20&c=BIbFwuv7FxTWvh5S3vB6bkT0Qv8Vn8N5Ffseq84ClGI=" alt="User" class="h-8 w-8 rounded-full">
     </div>
   </div>
 
@@ -105,7 +119,7 @@
       <a href="#home" class="nav-link active px-3 py-2 rounded-lg transition duration-300 hover:bg-blue-500 hover:text-white"
         data-section="home">Home</a>
       <a href="#directory" class="nav-link px-3 py-2 rounded-lg transition duration-300 hover:bg-blue-500 hover:text-white"
-        data-section="directory">Directory</a>
+        data-section="directory">Alumni</a>
       <a href="#mentorship" class="nav-link px-3 py-2 rounded-lg transition duration-300 hover:bg-blue-500 hover:text-white"
         data-section="mentorship">Mentorship</a>
       <a href="#events" class="nav-link px-3 py-2 rounded-lg transition duration-300 hover:bg-blue-500 hover:text-white"
@@ -127,10 +141,22 @@
         <section id="home" class="mb-12">
             <div class="flex flex-col md:flex-row items-center md:gap-20 gap-8">
                 <div class="md:w-1/2 mb-8 md:mb-0">
-                    <h1 class="text-3xl sm:text-4xl font-bold mb-4">Welcome to the </h1>
-                    <h1 class="text-3xl sm:text-4xl font-bold mb-4">Alumni Hub: Connect, Engage, Empower yourself</h1>
+             
+                    <h1 class="text-3xl sm:text-4xl font-bold mb-4">Alumni Hub : Connect, Engage, Empower yourself</h1>
                     <p class="text-base sm:text-lg mb-6">Alumni Hub is a centralized platform for managing and engaging alumni networks. Connect with peers, find mentors, organize events, and support your alma mater.</p>
-                    <a href="#directory" class="bg-indigo text-white px-4 sm:px-6 py-2 sm:py-3 rounded-md hover:bg-indigo-700 transition nav-link text-sm sm:text-base" data-section="directory">Explore Directory</a>
+                    <a href="#directory" 
+                    class="mt-4 px-5 sm:px-7 py-2.5 sm:py-3.5 
+                           rounded-full text-sm sm:text-base font-medium 
+                           bg-[#A2BFFE]/100
+                           text-black shadow-md shadow-indigo-500/30
+                           hover:from-indigo-600 hover:to-purple-700 hover: scale-110 shadow-lg hover:shadow-purple-500/40
+                           transition-all duration-300 ease-in-out transform hover:scale-105 
+                           focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-400
+                           nav-link dark:text-white "
+                    data-section="directory">
+                    Explore Alumni
+                 </a>
+                 
                 </div>
                 <div class="md:w-1/2">
                     <img  class="w-[450px] h-[400px]  rounded-2xl mt-8" src="./alumni .jpg" 
@@ -189,39 +215,75 @@
 
   <!-- Filters -->
   <div class="mb-8 flex flex-wrap gap-3">
+    <!-- Name Search -->
     <input id="directory-search" type="text" placeholder="Search by name..." 
-           class="flex-1 p-3 border rounded-xl dark:bg-gray-800 dark:border-gray-600 focus:ring-2 focus:ring-orange-400 outline-none">
-           
-    <select id="batch-filter" class="flex-1 p-3 border rounded-xl dark:bg-gray-800 dark:border-gray-600 focus:ring-2 focus:ring-orange-400 outline-none">
+           class="flex-1 p-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-800 
+                  rounded-2xl shadow-sm dark:shadow-gray-900/50 
+                  placeholder-gray-500 dark:placeholder-gray-400
+                  focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent
+                  transition-all duration-300 hover:shadow-md">
+  
+    <!-- Batch Filter -->
+    <select id="batch-filter" 
+            class="flex-1 p-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-800 
+                   rounded-2xl shadow-sm dark:shadow-gray-900/50 
+                   focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent
+                   transition-all duration-300 hover:shadow-md">
       <option value="">Batch Range</option>
       <option value="2000-2009">2000-2009</option>
       <option value="2010-2019">2010-2019</option>
       <option value="2020-2029">2020-2029</option>
     </select>
-    
-    <select id="industry-filter" class="flex-1 p-3 border rounded-xl dark:bg-gray-800 dark:border-gray-600 focus:ring-2 focus:ring-orange-400 outline-none">
+  
+    <!-- Industry Filter -->
+    <select id="industry-filter" 
+            class="flex-1 p-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-800 
+                   rounded-2xl shadow-sm dark:shadow-gray-900/50 
+                   focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent
+                   transition-all duration-300 hover:shadow-md">
       <option value="">Industry</option>
     </select>
-
-    <select id="location-filter" class="flex-1 p-3 border rounded-xl dark:bg-gray-800 dark:border-gray-600 focus:ring-2 focus:ring-orange-400 outline-none">
+  
+    <!-- Location Filter -->
+    <select id="location-filter" 
+            class="flex-1 p-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-800 
+                   rounded-2xl shadow-sm dark:shadow-gray-900/50 
+                   focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent
+                   transition-all duration-300 hover:shadow-md">
       <option value="">Location</option>
     </select>
-
+  
+    <!-- Tags Filter -->
     <input id="tags-filter" type="text" placeholder="Tags (comma separated)" 
-           class="flex-1 p-3 border rounded-xl dark:bg-gray-800 dark:border-gray-600 focus:ring-2 focus:ring-orange-400 outline-none">
-
-    <select id="verified-filter" class="flex-1 p-3 border rounded-xl dark:bg-gray-800 dark:border-gray-600 focus:ring-2 focus:ring-orange-400 outline-none">
+           class="flex-1 p-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-800 
+                  rounded-2xl shadow-sm dark:shadow-gray-900/50 
+                  placeholder-gray-500 dark:placeholder-gray-400
+                  focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent
+                  transition-all duration-300 hover:shadow-md">
+  
+    <!-- Verified Filter -->
+    <select id="verified-filter" 
+            class="flex-1 p-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-800 
+                   rounded-2xl shadow-sm dark:shadow-gray-900/50 
+                   focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent
+                   transition-all duration-300 hover:shadow-md">
       <option value="">Verified</option>
       <option value="true">Yes</option>
       <option value="false">No</option>
     </select>
-
-    <select id="sort-select" class="flex-1 p-3 border rounded-xl dark:bg-gray-800 dark:border-gray-600 focus:ring-2 focus:ring-orange-400 outline-none">
+  
+    <!-- Sort Filter -->
+    <select id="sort-select" 
+            class="flex-1 p-3 border border-gray-300 dark:border-gray-600 dark:bg-gray-800 
+                   rounded-2xl shadow-sm dark:shadow-gray-900/50 
+                   focus:outline-none focus:ring-2 focus:ring-orange-400 focus:border-transparent
+                   transition-all duration-300 hover:shadow-md">
       <option value="newest">Newest</option>
       <option value="active">Most Active</option>
       <option value="connected">Most Connected</option>
     </select>
   </div>
+  
 
   <!-- Alumni Grid -->
   <div id="alumni-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -275,13 +337,37 @@
         </section>
 
         <!-- Donations -->
-        <section id="donations" class="py-12 bg-gray-50 dark:bg-gray-900 hidden">
-            <h2 class="text-xl sm:text-2xl font-bold mb-6">Donations & Fundraising</h2>
-            <div class="bg-white dark:bg-gray-800 p-4 sm:p-6 rounded-xl shadow-md text-center">
-                <p class="mb-4 text-sm sm:text-base">Support our alumni network</p>
-                <button id="donate-btn" class="bg-orange text-white px-4 sm:px-6 py-2 sm:py-3 rounded-md text-sm sm:text-base">Donate Now</button>
-            </div>
+        <section id="donations" class="py-16 bg-gray-50 dark:bg-gray-900 hidden relative overflow-hidden round">
+          <!-- Background gradient aura -->
+          <div class="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-pink-500/10 to-purple-500/10 dark:from-orange-400/5 dark:via-pink-400/5 dark:to-purple-400/5 blur-3xl"></div>
+          
+          <h2 class="relative text-2xl sm:text-3xl font-extrabold mb-10 text-center text-gray-800 dark:text-gray-100 drop-shadow-sm">
+            Donations & Fundraising
+          </h2>
+          
+          <div class="max-w-md mx-auto relative">
+            <div class="backdrop-blur-2xl bg-white/20 dark:bg-gray-800/20 border border-white/30 dark:border-gray-700/40 p-8 sm:p-10 rounded-3xl shadow-2xl transition-all duration-500 hover:shadow-[0_8px_30px_rgb(0,0,0,0.3)] hover:scale-[1.03]">
+              
+              <p class="mb-6 text-base sm:text-lg text-gray-700 dark:text-gray-300 font-medium">
+                Be the reason our alumni network grows stronger ✨
+              </p>
+              
+              <!-- Fancy Donate Button -->
+             <!-- Fancy Donate Button -->
+<div class="relative group inline-block">
+  <!-- Glow aura -->
+  <div class="absolute -inset-1 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 rounded-lg blur-lg opacity-60 group-hover:opacity-90 transition duration-300 animate-pulse"></div>
+  
+  <!-- Actual button -->
+  <button id="donate-btn" 
+    class="relative bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 hover:from-purple-700 hover:via-pink-700 hover:to-red-700 
+    text-white px-8 py-3 rounded-lg text-base font-bold shadow-md hover:shadow-lg transition-all duration-300 tracking-wide drop-shadow-md">
+    Donate Now
+  </button>
+</div>
+
         </section>
+        
 
         <!-- Admin Stub -->
         <section id="admin" class="py-12 hidden">
@@ -290,17 +376,136 @@
         </section>
 
         <!-- Settings -->
-        <section id="settings" class="py-12 bg-gray-50 dark:bg-gray-900 hidden">
-            <h2 class="text-xl sm:text-2xl font-bold mb-6">Settings</h2>
-            <div class="space-y-4 flex flex-col ">
-                <button id="export-data" class="bg-teal text-white px-4 py-2 rounded-md text-sm sm:text-base">Export Data</button>
-                <input type="file" id="import-data" class="hidden">
-                <button id="import-btn" class="bg-teal text-white px-4 py-2 rounded-md text-sm sm:text-base">Import Data</button>
-                <button id="logoutBtn" class="bg-red-500 text-white px-4 py-2 rounded-md text-sm sm:text-base gap-8">Log Out</button>
-
-
-
+        <section id="settings" class="py-16 bg-gray-50 dark:bg-gray-900 hidden relative overflow-hidden">
+          <!-- Background aura -->
+          <div class="absolute inset-0 bg-gradient-to-br from-teal-500/10 via-purple-500/10 to-pink-500/10 
+                      dark:from-teal-400/5 dark:via-purple-400/5 dark:to-pink-400/5 blur-3xl"></div>
+        
+          <h2 class="relative text-3xl font-extrabold mb-12 text-center 
+                     text-gray-900 dark:text-gray-100 drop-shadow-sm">
+                     <span class="material-symbols-rounded">
+                      settings
+                      </span> Settings
+          </h2>
+        
+          <div class="max-w-4xl mx-auto relative grid gap-8 sm:grid-cols-2">
+            
+            <!-- Profile Settings -->
+            <div class="group backdrop-blur-xl bg-white/40 dark:bg-gray-800/30 
+                        border border-white/60 dark:border-gray-700/50 
+                        p-6 rounded-2xl shadow-lg 
+                        hover:scale-[1.03] hover:border-indigo-400/60 hover:shadow-indigo-500/20 
+                        transition-all duration-300">
+              <h3 class="flex items-center text-lg font-semibold 
+                         text-gray-900 dark:text-gray-100 mb-4">
+                👤 Profile
+              </h3>
+              <button class="w-full bg-gradient-to-r from-blue-700 to-indigo-500 
+                             text-gray-700 px-4 py-2 rounded-md mb-2 font-medium 
+                             shadow-md hover:scale-105 transition dark:text-white">
+                Edit Profile
+              </button>
+              <button class="w-full bg-gradient-to-r from-blue-700 to-indigo-500 
+                             text-gray-700 px-4 py-2 rounded-md font-medium 
+                             shadow-md hover:scale-105 transition dark:text-white">
+                Change Picture
+              </button>
             </div>
+        
+            <!-- Account Settings -->
+            <div class="group backdrop-blur-xl bg-white/40 dark:bg-gray-800/30 
+                        border border-white/60 dark:border-gray-700/50 
+                        p-6 rounded-2xl shadow-lg 
+                        hover:scale-[1.03] hover:border-teal-400/60 hover:shadow-teal-500/20 
+                        transition-all duration-300">
+              <h3 class="flex items-center text-lg font-semibold 
+                         text-gray-900 dark:text-gray-100 mb-4">
+                🔑 Account
+              </h3>
+              <button class="w-full bg-gradient-to-r from-green-700 to-teal-500 
+                             text-gray-700 px-4 py-2 rounded-md mb-2 font-medium 
+                             shadow-md hover:scale-105 transition dark:text-white">
+                Change Password
+              </button>
+              <button class="w-full bg-gradient-to-r from-green-700 to-teal-500 
+                             text-gray-700 px-4 py-2 rounded-md font-medium 
+                             shadow-md hover:scale-105 transition dark:text-white">
+                Two-Factor Auth
+              </button>
+            </div>
+        
+            <!-- Notifications -->
+            <div class="group backdrop-blur-xl bg-white/40 dark:bg-gray-800/30 
+                        border border-white/60 dark:border-gray-700/50 
+                        p-6 rounded-2xl shadow-lg 
+                        hover:scale-[1.03] hover:border-pink-400/60 hover:shadow-pink-500/20 
+                        transition-all duration-300">
+              <h3 class="flex items-center text-lg font-semibold 
+                         text-gray-900 dark:text-gray-100 mb-4">
+                🔔 Notifications
+              </h3>
+              <label class="flex items-center justify-between mb-4">
+                <span class="text-gray-800 dark:text-gray-200">Email Alerts</span>
+                <input type="checkbox" class="peer hidden">
+                <span class="w-12 h-6 flex items-center bg-gray-300 dark:bg-gray-600 
+                             rounded-full p-1 duration-300 peer-checked:bg-indigo-500">
+                  <span class="bg-white w-4 h-4 rounded-full shadow-md transform 
+                               duration-300 peer-checked:translate-x-6"></span>
+                </span>
+              </label>
+              <label class="flex items-center justify-between">
+                <span class="text-gray-800 dark:text-gray-200">Event Reminders</span>
+                <input type="checkbox" class="peer hidden">
+                <span class="w-12 h-6 flex items-center bg-gray-300 dark:bg-gray-600 
+                             rounded-full p-1 duration-300 peer-checked:bg-indigo-500">
+                  <span class="bg-white w-4 h-4 rounded-full shadow-md transform 
+                               duration-300 peer-checked:translate-x-6"></span>
+                </span>
+              </label>
+            </div>
+        
+            <!-- Data & Security -->
+            <div class="group backdrop-blur-xl bg-white/40 dark:bg-gray-800/30 
+                        border border-white/60 dark:border-gray-700/50 
+                        p-6 rounded-2xl shadow-lg 
+                        hover:scale-[1.03] hover:border-cyan-400/60 hover:shadow-cyan-500/20 
+                        transition-all duration-300">
+              <h3 class="flex items-center text-lg font-semibold 
+                         text-gray-900 dark:text-gray-100 mb-4">
+                         <span class="material-symbols-rounded">
+                          lock
+                          </span> Data & Security
+              </h3>
+              <button id="export-data" class="w-full bg-gradient-to-r from-red-400 via-indigo-300 to-blue-600
+                                             text-white px-4 py-2 rounded-md mb-2 font-medium 
+                                             shadow-md hover:scale-105 transition dark:text-white ">
+                Export Data
+              </button>
+              <input type="file" id="import-data" class="hidden">
+              <button id="import-btn" class="w-full bg-gradient-to-r from-red-400 via-indigo-300 to-blue-600
+                                             text-white px-4 py-2 rounded-md font-medium 
+                                             shadow-md hover:scale-105 transition dark:text-white">
+                Import Data
+              </button>
+            </div>
+          </div>
+        
+          <!-- Logout -->
+          <div class="max-w-3xl mx-auto mt-10 relative">
+            <div class="backdrop-blur-xl bg-white/40 dark:bg-gray-800/30 
+                        border border-white/60 dark:border-gray-700/50 
+                        p-6 rounded-2xl shadow-lg text-center 
+                        hover:scale-[1.02] hover:border-red-400/60 hover:shadow-red-500/20 
+                        transition-all duration-300">
+              <button id="logoutBtn" class="bg-gradient-to-r from-red-500 to-pink-600 
+                                           text-white px-8 py-3 rounded-lg text-lg 
+                                           font-semibold shadow-lg hover:scale-105 transition">
+                                           <span class="material-symbols-rounded">
+                                            logout
+                                            </span> Log Out
+              </button>
+            </div>
+          </div>
         </section>
     </main>
 

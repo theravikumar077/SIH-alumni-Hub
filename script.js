@@ -4,9 +4,10 @@ document.getElementById("logoutBtn").addEventListener("click", ()=>{
     localStorage.removeItem("loggedInUser");
     localStorage.removeItem("isAdmin");
     // Redirect back to index.html (or your login page)
-    window.location.href = "login.html";
+    window.location.href = "index.html";
   });
 
+  
 
 function showToast(message, type = 'success') {
     const toast = document.getElementById('toast');
@@ -23,6 +24,10 @@ function debounce(func, delay) {
         timeout = setTimeout(() => func(...args), delay);
     };
 }
+
+
+
+
 
 // Data management
 let alumni = [];
@@ -101,6 +106,10 @@ function populateFilters() {
         locationFilter.appendChild(option);
     });
 }
+
+
+
+
 
 function renderDashboard() {
     document.getElementById('total-alumni').textContent = alumni.length;
@@ -366,6 +375,8 @@ document.getElementById('confirm-donation').addEventListener('click', () => {
         showToast('Invalid amount', 'error');
     }
 });
+
+
 
 document.getElementById('export-data').addEventListener('click', () => {
     const data = { alumni, events, mentorshipRequests, donations };

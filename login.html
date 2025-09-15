@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LMS Login/Signup</title>
+  <title>Alumni Login/Signup</title>
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
@@ -20,7 +20,8 @@
     @keyframes fadeOut { from {opacity:1; transform:translateY(0);} to {opacity:0; transform:translateY(-20px);} }
   </style>
 </head>
-<body class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-black to-black overflow-hidden">
+<body class=" mt-[-80px] relative min-h-screen flex items-center justify-center bg-white backdrop-blur-xl overflow-hidden">
+
 
   <!-- Floating Blobs -->
   <div class="blob blob1"></div>
@@ -28,77 +29,79 @@
   <div class="blob blob3"></div>
 
   <!-- Main Card Container -->
-  <div class="relative z-10 w-full max-w-md p-6 glass-card rounded-3xl shadow-xl text-white">
+ <div class="border-black relative z-10 w-full max-w-md p-8 bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl rounded-2xl shadow-2xl border border-white/20 text-white">
 
-    <!-- Welcome Card -->
-    <div id="welcomeCard" class="space-y-6 fade-in">
-      <h1 class="text-3xl font-bold text-center">Welcome Back</h1>
-      <p class="text-center text-gray-200">Login or sign up to continue</p>
-      <div class="flex justify-center gap-4">
-        <button id="gotoLogin" class=" text-black px-6 py-2 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400 hover:scale-105 transition">Login</button>
-        <button id="gotoSignup" class="text-black px-6 py-2 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400 hover:scale-105 transition">Sign Up</button>
-      </div>
-    </div>
-
-    <!-- Login Form -->
-    <form id="loginForm" class="hidden space-y-4 fade-in">
-      <h2 class="text-2xl font-bold text-center">Login</h2>
-      <div class="relative">
-        <span class="material-symbols-rounded absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-300">person</span>
-        <input type="text" id="loginUsername" placeholder="Username" class="w-full px-10 py-2 rounded-full bg-white/20 placeholder-gray-300 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400">
-      </div>
-      <div class="relative">
-        <span class="material-symbols-rounded absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-300">lock</span>
-        <input type="password" id="loginPassword" placeholder="Password" class="w-full px-10 py-2 rounded-full bg-white/20 placeholder-gray-300 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400">
-        <span class="material-symbols-rounded absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-300 cursor-pointer" id="toggleLoginPass">visibility</span>
-      </div>
-      <button type="submit" class="w-full py-2 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400 hover:scale-105 transition">Login</button>
-      <div class="flex justify-between text-sm">
-        <span class="cursor-pointer text-cyan-300 hover:underline" id="forgotPasswordLink">Forgot Password?</span>
-        <span class="text-gray-300"> or <span class="cursor-pointer text-cyan-300 hover:underline" id="backToSignup">Sign Up</span></span>
-      </div>
-    </form>
-
-    <!-- Signup Form -->
-    <form id="signupForm" class="hidden space-y-4 fade-in">
-      <h2 class="text-2xl font-bold text-center">Sign Up</h2>
-      <div class="relative">
-        <span class="material-symbols-rounded absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-300">person</span>
-        <input type="text" id="signupFullname" placeholder="Full Name" class="w-full px-10 py-2 rounded-full bg-white/20 placeholder-gray-300 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400">
-      </div>
-      <div class="relative">
-        <span class="material-symbols-rounded  absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-300">attach_email</span>
-        <input type="email" id="signupEmail" placeholder="Email" class="w-full px-10 py-2 rounded-full bg-white/20 placeholder-gray-300 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400">
-      </div>
-      <div class="relative">
-        <span class="material-symbols-rounded  absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-300">account_circle</span>
-        <input type="text" id="signupUsername" placeholder="Username" class="w-full px-10 py-2 rounded-full bg-white/20 placeholder-gray-300 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400">
-      </div>
-      <div class="relative">
-        <span class="material-symbols-rounded absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-300">lock</span>
-        <input type="password" id="signupPassword" placeholder="Password" class="w-full px-10 py-2 rounded-full bg-white/20 placeholder-gray-300 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400">
-        <i class="fa fa-eye absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-300 cursor-pointer" id="toggleSignupPass"></i>
-      </div>
-      <div class="relative">
-        <span class="material-symbols-rounded absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-300">lock</span>
-        <input type="password" id="signupConfirmPassword" placeholder="Confirm Password" class="w-full px-10 py-2 rounded-full bg-white/20 placeholder-gray-300 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400">
-      </div>
-      <button type="submit" class="w-full py-2 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400 hover:scale-105 transition">Sign Up</button>
-      <div class="text-center text-gray-300 text-sm">
-        Already have an account? <span class="cursor-pointer text-cyan-300 hover:underline" id="backToLogin">Login</span>
-      </div>
-    </form>
-
-    <!-- Forgot Password Modal -->
-    <div id="forgotPasswordModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-20">
-      <div class="glass-card p-6 rounded-3xl w-80 space-y-4 relative">
-        <h2 class="text-xl font-bold text-center">Reset Password</h2>
-        <input type="email" id="forgotEmail" placeholder="Email" class="w-full px-4 py-2 rounded-full bg-white/20 placeholder-gray-300 text-white focus:outline-none focus:ring-2 focus:ring-cyan-400">
-        <button class="w-full py-2 rounded-full bg-gradient-to-r from-blue-500 to-cyan-400 hover:scale-105 transition" id="resetPasswordBtn">Reset</button>
-        <span class="absolute top-3 right-4 cursor-pointer text-gray-200 text-lg" id="closeForgot">&times;</span>
-      </div>
+  <!-- Welcome Card -->
+  <div id="welcomeCard" class="space-y-4 fade-in text-center">
+    <h1 class="text-3xl font-bold tracking-wide text-black">✨ Welcome Back</h1>
+    <p class=" text-sm text-black">Login or create an account to continue</p>
+    <div class="flex justify-center gap-4 pt-2">
+      <button id="gotoLogin" class="px-6 py-2 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 text-black font-semibold shadow hover:opacity-90 transition">Login</button>
+      <button id="gotoSignup" class="px-6 py-2 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-400 text-black font-semibold shadow hover:opacity-90 transition">Sign Up</button>
     </div>
   </div>
+
+  <!-- Login Form -->
+  <form id="loginForm" class="hidden space-y-5 fade-in">
+    <h2 class="text-2xl font-bold text-center text-black ">Login</h2>
+    <div class="relative">
+      <span class="material-symbols-rounded absolute left-3 top-1/2 -translate-y-1/2 text-black">person</span>
+      <input type="text" id="loginUsername" placeholder="Username" class="border-black w-full px-10 py-3 rounded-xl bg-white/15 text-black placeholder-black focus:outline-none focus:ring-2 focus:ring-black">
+    </div>
+    <div class="relative">
+      <span class="material-symbols-rounded absolute left-3 top-1/2 -translate-y-1/2 text-gray-900">lock</span>
+      <input type="password" id="loginPassword" placeholder="Password" class="w-full px-10 py-3 rounded-xl bg-white/15 text-black placeholder-gray-900 focus:outline-none focus:ring-2 focus:ring-black">
+      <span id="toggleLoginPass" class="material-symbols-rounded absolute right-3 top-1/2 -translate-y-1/2 text-gray-900 cursor-pointer">visibility</span>
+    </div>
+    <button type="submit" class="w-full py-3 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 text-black font-semibold shadow hover:opacity-90 transition">Login</button>
+    <div class="flex justify-between text-sm text-gray-300">
+      <span id="forgotPasswordLink" class="cursor-pointer text-cyan-900 hover:underline">Forgot Password ?</span>
+      <span classNme="text-black" > <span id="backToSignup" class="cursor-pointer text-black hover:underline">Sign Up</span></span>
+    </div>
+  </form>
+
+  <!-- Signup Form -->
+  <form id="signupForm" class="hidden space-y-5 fade-in">
+    <h2 class="text-2xl font-bold text-center text-black">Create Account</h2>
+    <div class="relative">
+      <span class="material-symbols-rounded absolute left-3 top-1/2 -translate-y-1/2 text-gray-900">person</span>
+      <input type="text" id="signupFullname" placeholder="Full Name" class="w-full px-10 py-3 rounded-xl bg-white/15  text-black placeholder-gray-900 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+    </div>
+    <div class="relative">
+      <span class="material-symbols-rounded absolute left-3 top-1/2 -translate-y-1/2 text-gray-900">attach_email</span>
+      <input type="email" id="signupEmail" placeholder="Email" class="w-full px-10 py-3 rounded-xl bg-white/15  text-black placeholder-gray-900 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+    </div>
+    <div class="relative">
+      <span class="material-symbols-rounded absolute left-3 top-1/2 -translate-y-1/2 text-gray-900">account_circle</span>
+      <input type="text" id="signupUsername" placeholder="Username" class="w-full px-10 py-3 rounded-xl bg-white/15  text-black placeholder-gray-900 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+    </div>
+    <div class="relative">
+      <span class="material-symbols-rounded absolute left-3 top-1/2 -translate-y-1/2 text-gray-900">lock</span>
+      <input type="password" id="signupPassword" placeholder="Password" class="w-full px-10 py-3 rounded-xl bg-white/15  text-black placeholder-gray-900 focus:outline-none focus:ring-2 focus:ring-cyan-409">
+      <i id="toggleSignupPass" class="fa fa-eye absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 cursor-pointer"></i>
+    </div>
+    <div class="relative">
+      <span class="material-symbols-rounded absolute left-3 top-1/2 -translate-y-1/2 text-gray-900">lock</span>
+      <input type="password" id="signupConfirmPassword" placeholder="Confirm Password" class="w-full px-10 py-3 rounded-xl bg-white/15  text-black placeholder-gray-900 focus:outline-none focus:ring-2 focus:ring-cyan-409">
+    </div>
+    <button type="submit" class="w-full py-3 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 text-black font-semibold shadow hover:opacity-90 transition">Sign Up</button>
+    <div class="text-center text-sm text-gray-900">
+      Already have an account ? <span id="backToLogin" class="cursor-pointer text-cyan-500 hover:underline">Login</span>
+    </div>
+  </form>
+
+  <!-- Forgot Password Modal -->
+  <div id="forgotPasswordModal" class="hidden fixed inset-0 bg-black/50 flex items-center justify-center z-20">
+    <div class="bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-xl p-6 rounded-2xl w-80 space-y-4 relative border border-white/20 shadow-xl">
+      <h2 class="text-xl font-bold text-center">Reset Password</h2>
+      <input type="email" id="forgotEmail" placeholder="Email" class="w-full px-4 py-3 rounded-xl bg-white/15 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+      <button id="resetPasswordBtn" class="w-full py-3 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 text-black font-semibold shadow hover:opacity-90 transition">Reset</button>
+      <span id="closeForgot" class="absolute top-3 right-4 cursor-pointer text-gray-200 text-lg">&times;</span>
+    </div>
+  </div>
+</div>
+
+  
 
   <!-- JavaScript -->
   
@@ -168,7 +171,7 @@
       if(username==="admin" && password==="123456"){
         localStorage.setItem("loggedInUser", username);
         localStorage.setItem("isAdmin","true");
-        window.location.href="admin.html";
+        window.location.href="index1.html";
         return;
       }
   
@@ -176,7 +179,7 @@
       if(matched){
         localStorage.setItem("loggedInUser", username);
         localStorage.setItem("isAdmin","false");
-        window.location.href="user.html";
+        window.location.href="index2.html";
       } else {
         alert("Wrong username or password!");
         loginForm.reset();

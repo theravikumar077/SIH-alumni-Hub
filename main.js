@@ -4,7 +4,7 @@ document.getElementById("logoutBtn").addEventListener("click", ()=>{
     localStorage.removeItem("loggedInUser");
     localStorage.removeItem("isAdmin");
     // Redirect back to index.html (or your login page)
-    window.location.href = "login.html";
+    window.location.href = "index.html";
   });
 
 function showToast(message, type = 'success') {
@@ -271,20 +271,64 @@ function renderEvents() {
     list.innerHTML = '';
     events.forEach(event => {
         const card = document.createElement('div');
-        card.className = 'bg-white dark:bg-gray-800/90 backdrop-blur-md p-4 sm:p-6 rounded-xl shadow-lg';
+        card.className = `
+            bg-white/70 dark:bg-gray-800/70 
+            backdrop-blur-xl 
+            p-5 sm:p-7 
+            rounded-2xl 
+            shadow-xl 
+            border border-gray-200/40 dark:border-gray-700/40 
+            transition transform hover:scale-[1.02] hover:shadow-2xl
+        `;
         card.innerHTML = `
-            <h4 class="font-bold text-base sm:text-lg">${event.title}</h4>
-            <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-400">Date: ${event.date} • Venue: ${event.venue}</p>
-            <p class="text-xs sm:text-sm">${event.description}</p>
-            <div class="mt-3 sm:mt-4 flex items-center space-x-2 sm:space-x-3">
-                <button class="bg-teal text-white px-3 py-1.5 sm:px-4 sm:py-2 rounded-full text-sm sm:text-base rsvp-btn">${event.rsvped ? 'Enrolled' : 'Enroll'}</button>
-                <span class="text-xs sm:text-sm">Attendees: ${event.attendees.length}</span>
+            <div class="flex items-start justify-between">
+                <h4 class="font-bold text-lg sm:text-xl text-gray-800 dark:text-white">
+                    ${event.title}
+                </h4>
+                <span class="text-xs text-black bg-gray-500 sm:text-sm px-3 py-1 rounded-full text-white shadow-md dark:text-black dark:bg-white">
+                    ${event.rsvped ? 'Enrolled' : 'Upcoming'}
+                </span>
+            </div>
+            
+            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                <span class="material-symbols-rounded">
+calendar_month
+</span> ${event.date} • 📍 ${event.venue}
+            </p>
+            
+            <p class="mt-3 text-sm sm:text-base text-gray-700 dark:text-gray-300 leading-relaxed">
+                ${event.description}
+            </p>
+            
+            <div class="mt-5 flex items-center justify-between">
+              <button class="
+    rsvp-btn 
+    bg-gray-200 dark:bg-gradient-to-r dark:from-teal-500 dark:to-blue-500 
+    text-gray-800 dark:text-black 
+    px-5 py-2 
+    rounded-full 
+    text-sm sm:text-base 
+    font-medium 
+    shadow-md 
+    hover:shadow-xl 
+    hover:scale-105 
+    transition-all duration-300
+">
+    ${event.rsvped ? '✅ Enrolled' : '✨ Enroll Now'}
+</button>
+
+
+                
+                <span class="text-xs sm:text-sm text-gray-500 dark:text-gray-400">
+                    👥 Attendees: ${event.attendees.length}
+                </span>
             </div>
         `;
         card.querySelector('.rsvp-btn').addEventListener('click', () => showRSVP(event.id));
         list.appendChild(card);
     });
 }
+
 
 document.getElementById('create-event-btn').addEventListener('click', () => {
     document.getElementById('create-event-modal').classList.remove('hidden');

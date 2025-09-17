@@ -566,118 +566,131 @@
         <div id="events-list" class="space-y-4 sm:space-y-6"></div>
       </section>
 
-      <!-- Donations -->
-      <section
-        id="donations"
-        class="py-16 bg-red-500 dark:bg-gray-900 hidden relative overflow-hidden round"
+  <!-- Donations -->
+<section
+  id="donations"
+  class="py-16 dark:bg-gray-900 relative overflow-hidden round"
+>
+  <!-- Background gradient aura -->
+  <div
+    class="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-pink-500/10 to-purple-500/10 
+    dark:from-orange-400/5 dark:via-pink-400/5 dark:to-purple-400/5 blur-3xl -z-10 pointer-events-none"
+  ></div>
+
+  <h2
+    class="relative text-2xl sm:text-3xl font-extrabold mb-10 text-center text-gray-800 dark:text-gray-100 drop-shadow-sm"
+  >
+    Donations & Fundraising
+  </h2>
+
+  <div class="max-w-md mx-auto relative">
+    <div
+      class="backdrop-blur-2xl bg-white/20 dark:bg-gray-800/20 border border-white/30 dark:border-gray-700/40 p-8 sm:p-10 rounded-3xl shadow-2xl transition-all duration-500 hover:shadow-[0_8px_30px_rgb(0,0,0,0.3)] hover:scale-[1.03]"
+    >
+      <p
+        class="mb-6 text-base sm:text-lg text-gray-700 dark:text-gray-300 font-medium"
       >
-        <!-- Background gradient aura -->
+        Be the reason our alumni network grows stronger ✨
+      </p>
+
+      <!-- Fancy Donate Button -->
+      <div class="relative group inline-block">
+        <!-- Glow aura -->
         <div
-          class="absolute inset-0 bg-gradient-to-br from-orange-500/10 via-pink-500/10 to-purple-500/10 dark:from-orange-400/5 dark:via-pink-400/5 dark:to-purple-400/5 blur-3xl"
+          class="absolute -inset-1 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 rounded-lg blur-lg opacity-60 group-hover:opacity-90 transition duration-300 animate-pulse"
         ></div>
 
-        <h2
-          class="relative text-2xl sm:text-3xl font-extrabold mb-10 text-center text-gray-800 dark:text-gray-100 drop-shadow-sm"
+        <!-- Actual button -->
+        <button
+          id="donate-btn"
+          class="relative bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 hover:from-purple-700 hover:via-pink-700 hover:to-red-700 text-white px-8 py-3 rounded-lg text-base font-bold shadow-md hover:shadow-lg transition-all duration-300 tracking-wide drop-shadow-md"
         >
-          Donations & Fundraising
-        </h2>
-
-        <div class="max-w-md mx-auto relative">
-          <div
-            class="backdrop-blur-2xl bg-white/20 dark:bg-gray-800/20 border border-white/30 dark:border-gray-700/40 p-8 sm:p-10 rounded-3xl shadow-2xl transition-all duration-500 hover:shadow-[0_8px_30px_rgb(0,0,0,0.3)] hover:scale-[1.03]"
-          >
-            <p
-              class="mb-6 text-base sm:text-lg text-gray-700 dark:text-gray-300 font-medium"
-            >
-              Be the reason our alumni network grows stronger ✨
-            </p>
-
-            <!-- Fancy Donate Button -->
-            <div class="relative group inline-block">
-              <!-- Glow aura -->
-              <div
-                class="absolute -inset-1 bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 rounded-lg blur-lg opacity-60 group-hover:opacity-90 transition duration-300 animate-pulse"
-              ></div>
-
-              <!-- Actual button -->
-              <button
-                id="donate-btn"
-                class="relative bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 hover:from-purple-700 hover:via-pink-700 hover:to-red-700 text-white px-8 py-3 rounded-lg text-base font-bold shadow-md hover:shadow-lg transition-all duration-300 tracking-wide drop-shadow-md"
-              >
-                Donate Now
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- FEEDBACK -->
-      <div
-        class="max-w-3xl mx-auto bg-white dark:bg-gray-800 shadow-2xl rounded-3xl p-8 sm:p-12"
-      >
-        <h2
-          class="text-3xl font-bold text-center text-gray-800 dark:text-gray-100 mb-6"
-        >
-          Feedback
-        </h2>
-        <p class="text-center text-gray-600 dark:text-gray-300 mb-8">
-          We’d love to hear your thoughts 💡 — help us improve!
-        </p>
-
-        <form class="space-y-6">
-          <!-- Name -->
-          <div>
-            <label
-              for="name"
-              class="block text-lg font-medium text-gray-700 dark:text-gray-300"
-              >Your Name</label
-            >
-            <input
-              type="text"
-              id="name"
-              class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:outline-none bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
-            />
-          </div>
-
-          <!-- Email -->
-          <div>
-            <label
-              for="email"
-              class="block text-lg font-medium text-gray-700 dark:text-gray-300"
-              >Your Email</label
-            >
-            <input
-              type="email"
-              id="email"
-              class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:outline-none bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
-            />
-          </div>
-
-          <!-- Feedback -->
-          <div>
-            <label
-              for="feedback-message"
-              class="block text-lg font-medium text-gray-700 dark:text-gray-300"
-              >Your Feedback</label
-            >
-            <textarea
-              id="feedback-message"
-              rows="4"
-              class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm focus:ring-2 focus:ring-purple-500 focus:outline-none bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
-            ></textarea>
-          </div>
-
-          <!-- Submit Button -->
-          <div class="text-center">
-            <button
-              type="submit"
-              class="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 hover:from-purple-700 hover:via-pink-700 hover:to-red-700 text-white px-8 py-3 rounded-lg text-base font-bold shadow-md hover:shadow-lg transition-all duration-300 tracking-wide drop-shadow-md"
-            >
-              Submit Feedback
-            </button>
-          </div>
-        </form>
+          Donate Now
+        </button>
       </div>
+    </div>
+  </div>
+
+ <!-- Feedback Section -->
+<div
+  class="max-w-3xl mx-auto mt-12 bg-white dark:bg-gray-800 shadow-2xl rounded-3xl p-8 sm:p-12 relative z-10"
+>
+  <h2
+    class="text-3xl font-bold text-center text-gray-800 dark:text-gray-100 mb-6"
+  >
+    Feedback
+  </h2>
+  <p class="text-center text-gray-600 dark:text-gray-300 mb-8">
+    We’d love to hear your thoughts 💡 — help us improve!
+  </p>
+
+  <form id="feedbackForm" class="space-y-6">
+    <!-- Name -->
+    <div>
+      <label for="name" class="block text-lg font-medium">Your Name</label>
+      <input
+        type="text"
+        id="name"
+        required
+        class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg
+               bg-white text-gray-900 
+               dark:bg-gray-700 dark:text-gray-100"
+      />
+    </div>
+
+    <!-- Email -->
+    <div>
+      <label for="email" class="block text-lg font-medium">Your Email</label>
+      <input
+        type="email"
+        id="email"
+        required
+        class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg
+               bg-white text-gray-900 
+               dark:bg-gray-700 dark:text-gray-100"
+      />
+    </div>
+
+    <!-- Feedback -->
+    <div>
+      <label for="feedback-message" class="block text-lg font-medium">Your Feedback</label>
+      <textarea
+        id="feedback-message"
+        rows="4"
+        required
+        class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg
+               bg-white text-gray-900 
+               dark:bg-gray-700 dark:text-gray-100"
+      ></textarea>
+    </div>
+
+    <div class="text-center">
+      <button
+        type="submit"
+        class="bg-gradient-to-r from-purple-600 via-pink-600 to-red-600 text-white px-8 py-3 rounded-lg font-bold"
+      >
+        Submit Feedback
+      </button>
+    </div>
+  </form>
+
+  <!-- Success Message -->
+  <p
+    id="successMessage"
+    class="hidden mt-6 text-center text-green-600 dark:text-green-400 font-semibold"
+  >
+    ✅ Thank you! Your feedback has been submitted.
+  </p>
+
+  <!-- Feedback List -->
+  <div id="feedbackList" class="mt-8 space-y-4">
+    <h3 class="text-xl font-bold text-gray-800 dark:text-gray-100">Submitted Feedback</h3>
+    <ul id="feedbackItems" class="space-y-3"></ul>
+  </div>
+</div>
+
+</section>
+
 
       <!-- Admin Stub -->
       <section id="admin" class="py-12 hidden">

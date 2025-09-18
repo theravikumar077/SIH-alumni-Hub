@@ -514,3 +514,61 @@ document.addEventListener('DOMContentLoaded', () => {
     loadData();
     showSection('home');
 });
+
+// ----------------- FEEDBACK FORM FUNCTIONALITY -----------------
+document.addEventListener("DOMContentLoaded", () => {
+  const feedbackForm = document.getElementById("feedbackForm");
+  const feedbackList = document.getElementById("feedbackItems");
+  const successMessage = document.getElementById("successMessage");
+
+  // Load feedbacks from localStorage on page load
+  function loadFeedbacks() {
+    feedbackList.innerHTML = "";
+    let feedbacks = JSON.parse(localStorage.getItem("feedbacks")) || [];
+
+    feedbacks.forEach((fb) => {
+      const li = document.createElement("li");
+      li.className =
+        "p-4 bg-gray-100 dark:bg-gray-700 rounded-lg shadow-md";
+
+      li.innerHTML = `
+        <p class="font-semibold text-gray-800 dark:text-gray-100">${fb.name} <span class="text-sm text-gray-500">(${fb.email})</span></p>
+        <p class="text-gray-700 dark:text-gray-300 mt-1">${fb.feedback}</p>
+      `;
+      feedbackList.appendChild(li);
+    });
+  }
+
+  // Handle form submit
+  if (feedbackForm) {
+    feedbackForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const feedback = document.getElementById("feedback-message").value.trim();
+
+      if (!name || !email || !feedback) {
+        alert("⚠️ Please fill in all fields!");
+        return;
+      }
+
+      // Save feedback to localStorage
+      let feedbacks = JSON.parse(localStorage.getItem("feedbacks")) || [];
+      feedbacks.push({ name, email, feedback });
+      localStorage.setItem("feedbacks", JSON.stringify(feedbacks));
+
+      // Show success message
+      successMessage.classList.remove("hidden");
+
+      // Reset form
+      feedbackForm.reset();
+
+      // Reload list
+      loadFeedbacks();
+    });
+  }
+
+  // Load existing feedbacks when page loads
+  loadFeedbacks();
+});
